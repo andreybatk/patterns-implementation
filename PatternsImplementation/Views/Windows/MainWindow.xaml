@@ -4,9 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FactoryPattern.Views.Windows"
+        xmlns:vm="clr-namespace:FactoryPattern.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Animals" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Grid.Column="1" ItemsSource = "{Binding Animals}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Тип" DisplayMemberBinding="{Binding Type}" Width="60"/>
+                    <GridViewColumn Header="Вид" DisplayMemberBinding="{Binding Age}" Width="100"/>
+                    <GridViewColumn Header="Возраст" DisplayMemberBinding="{Binding KindOfAnimal}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel Grid.Column="0">
+            <TextBlock FontSize="23" Text="Управление:"/>
+            <Button Content="Добавить животное" Command="{Binding }"/>
+            <Button Content="Сохранить данные" Command="{Binding SaveDataCommand}"/>
+            <Button Content="Загрузить данные" Command="{Binding LoadDataCommand}"/>
+        </StackPanel>
     </Grid>
 </Window>
