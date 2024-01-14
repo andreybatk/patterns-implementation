@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace FactoryPattern.Infrastructure.Commands.Base
+namespace MWWM.Infrastructure.Commands.Base
 {
     internal abstract class Command : ICommand
     {

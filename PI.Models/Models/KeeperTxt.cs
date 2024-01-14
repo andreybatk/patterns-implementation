@@ -1,15 +1,8 @@
-﻿using FactoryPattern.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Shapes;
+﻿using PI.Models.Infrastructure;
 
-namespace FactoryPattern.Models
+namespace PI.Models.Models
 {
-    internal class KeeperTxt : IDataSave
+    public class KeeperTxt : IDataAction
     {
         private string _file;
 
@@ -24,17 +17,8 @@ namespace FactoryPattern.Models
             {
                 throw new FileNotFoundException("Файл не найден.");
             }
-            
-            using(StreamReader reader = new StreamReader($"{_file}.txt"))
-            {
-                string? line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    //Console.WriteLine(line);
-                }
 
-                return new List<IAnimal>();
-            }
+            return null;
         }
 
         public void SaveData(List<IAnimal> animals)

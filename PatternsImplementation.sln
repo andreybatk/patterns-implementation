@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "PatternsImplementation\FactoryPattern.csproj", "{1DA83800-6921-42C1-9932-A3E40B0488B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MWWM", "PatternsImplementation\MWWM.csproj", "{1DA83800-6921-42C1-9932-A3E40B0488B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PI.Models", "PI.Models\PI.Models.csproj", "{457F9B68-5437-4A05-A716-33320554A114}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1DA83800-6921-42C1-9932-A3E40B0488B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DA83800-6921-42C1-9932-A3E40B0488B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DA83800-6921-42C1-9932-A3E40B0488B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{457F9B68-5437-4A05-A716-33320554A114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457F9B68-5437-4A05-A716-33320554A114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457F9B68-5437-4A05-A716-33320554A114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457F9B68-5437-4A05-A716-33320554A114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

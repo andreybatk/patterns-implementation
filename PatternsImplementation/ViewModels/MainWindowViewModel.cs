@@ -1,17 +1,13 @@
-﻿using FactoryPattern.Infrastructure;
-using FactoryPattern.Infrastructure.Commands;
-using FactoryPattern.Models;
-using FactoryPattern.ViewModels.Base;
+﻿using PI.Models.Infrastructure;
+using MWWM.Infrastructure.Commands;
+using PI.Models.Models;
+using MWWM.ViewModels.Base;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace FactoryPattern.ViewModels
+namespace MWWM.ViewModels
 {
     internal class MainWindowViewModel : ViewModel
     {
@@ -38,6 +34,7 @@ namespace FactoryPattern.ViewModels
             try
             {
                 _repository.Save();
+                MessageBox.Show("Данные сохранены!", "Сохранение!", MessageBoxButton.OK);
             }
             catch (Exception ex)
             {
@@ -50,6 +47,7 @@ namespace FactoryPattern.ViewModels
             {
                 _repository.Load();
                 Animals = _repository.Animals;
+                MessageBox.Show("Данные загружены!", "Загрузка!", MessageBoxButton.OK);
             }
             catch (Exception ex)
             {

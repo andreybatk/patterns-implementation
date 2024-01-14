@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace FactoryPattern.ViewModels.Base
+namespace MWWM.ViewModels.Base
 {
     public abstract class ViewModel : INotifyPropertyChanged
     {

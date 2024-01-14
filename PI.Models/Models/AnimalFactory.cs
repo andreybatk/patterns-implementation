@@ -1,15 +1,8 @@
-﻿using FactoryPattern.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿using PI.Models.Infrastructure;
 
-namespace FactoryPattern.Models
+namespace PI.Models.Models
 {
-    internal static class AnimalFactory
+    public static class AnimalFactory
     {
         /// <summary>
         /// Get Animal
@@ -26,8 +19,6 @@ namespace FactoryPattern.Models
                 case "Bird": return new Bird(kindOfAnimal, age);
                 case "Mammal": return new Mammal(kindOfAnimal, age);
                 default: return new Animal(kindOfAnimal, age);
-
-                //default: return new NullWorker();
             }
         }
     }

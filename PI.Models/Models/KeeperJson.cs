@@ -1,17 +1,10 @@
-﻿using FactoryPattern.Infrastructure;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
+﻿using Newtonsoft.Json;
+using PI.Models.Infrastructure;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Shapes;
 
-namespace FactoryPattern.Models
+namespace PI.Models.Models
 {
-    internal class KeeperJson : IDataSave
+    public class KeeperJson : IDataAction
     {
         private string _file;
 
@@ -28,11 +21,9 @@ namespace FactoryPattern.Models
             }
 
             string json = File.ReadAllText($"{_file}.json", Encoding.UTF8);
-
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
 
             var obj = JsonConvert.DeserializeObject<List<IAnimal>>(json, settings);
-
             return obj;
         }
 
@@ -40,7 +31,6 @@ namespace FactoryPattern.Models
         {
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
 
-            //string json = JsonConvert.SerializeObject(animals, Formatting.Indented);
             string json = JsonConvert.SerializeObject(animals, settings);
             File.WriteAllText($"{_file}.json", json);
         }

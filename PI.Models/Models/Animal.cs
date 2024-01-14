@@ -1,13 +1,8 @@
-﻿using FactoryPattern.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PI.Models.Infrastructure;
 
-namespace FactoryPattern.Models
+namespace PI.Models.Models
 {
-    internal class Animal : IAnimal
+    public class Animal : IAnimal
     {
         public Animal(string kindOfAnimal, int age)
         {
