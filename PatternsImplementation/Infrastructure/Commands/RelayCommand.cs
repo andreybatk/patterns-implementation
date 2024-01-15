@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MWWM.Infrastructure.Commands
+namespace MVVM.Infrastructure.Commands
 {
     internal class RelayCommand : Command
     {

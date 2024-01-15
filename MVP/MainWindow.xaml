@@ -1,0 +1,46 @@
+﻿<Window x:Class="MVP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVP"
+        mc:Ignorable="d"
+        Title="Animals" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!--<ListView Name="lvAnimals" Grid.Column="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Тип" DisplayMemberBinding="{Binding Type}" Width="60"/>
+                    <GridViewColumn Header="Вид" DisplayMemberBinding="{Binding Age}" Width="100"/>
+                    <GridViewColumn Header="Возраст" DisplayMemberBinding="{Binding KindOfAnimal}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+        <DataGrid Name="lvAnimals" Grid.Column="1"
+                  IsSynchronizedWithCurrentItem="True"
+                  AutoGenerateColumns="False"
+                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Header="Тип" Binding ="{Binding Type}" Width="60"/>
+                <DataGridTextColumn Header="Вид" Binding="{Binding KindOfAnimal}" Width="100"/>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding Age}" Width="100"/>
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="itemAdd" Header="Добавить животное"/>
+                    <MenuItem Name="itemDelete" Header="Удалить животное" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+        <StackPanel Grid.Column="0">
+            <TextBlock FontSize="23" Text="Управление:"/>
+            <!--<Button Content="Добавить животное" Command="{Binding }"/>-->
+            <Button Name="btnSave"  Content="Сохранить данные"/>
+            <Button Name="btnLoad" Content="Загрузить данные"/>
+        </StackPanel>
+    </Grid>
+</Window>

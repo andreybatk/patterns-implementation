@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using PI.Models.Infrastructure;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace PI.Models.Models
@@ -13,7 +14,7 @@ namespace PI.Models.Models
             this._file = file;
         }
 
-        public List<IAnimal> LoadData()
+        public ObservableCollection<IAnimal> LoadData()
         {
             if (!File.Exists($"{_file}.json"))
             {
@@ -23,11 +24,11 @@ namespace PI.Models.Models
             string json = File.ReadAllText($"{_file}.json", Encoding.UTF8);
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
 
-            var obj = JsonConvert.DeserializeObject<List<IAnimal>>(json, settings);
+            var obj = JsonConvert.DeserializeObject<ObservableCollection<IAnimal>>(json, settings);
             return obj;
         }
 
-        public void SaveData(List<IAnimal> animals)
+        public void SaveData(ObservableCollection<IAnimal> animals)
         {
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
 

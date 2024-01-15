@@ -1,0 +1,34 @@
+﻿<Window x:Class="MVP.AddAnimal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVP"
+        mc:Ignorable="d"
+        Title="Добавить животное"
+        SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0">Введите тип:</TextBlock>
+        <TextBox Grid.Row="1" MinWidth="250" Name="txtType"
+             Text = "{Binding Type, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <TextBlock Grid.Row="2">Введите вид:</TextBlock>
+        <TextBox Grid.Row="3" MinWidth="250" Name="txtKindOfAnimal"
+             Text = "{Binding KindOfAnimal, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <TextBlock Grid.Row="4">Введите возраст:</TextBlock>
+        <TextBox Grid.Row="5" MinWidth="250" Name="txtAge"
+             Text = "{Binding Age, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <WrapPanel Grid.Row="6" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Name="btnOK" IsDefault="True" MinWidth="60" Margin="0,0,10,0">OK</Button>
+            <Button IsCancel="True" MinWidth="60">Отмена</Button>
+        </WrapPanel>
+    </Grid>
+</Window>

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace MWWM.Views.Windows
+namespace MVVM.Views.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

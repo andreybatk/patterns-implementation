@@ -1,4 +1,5 @@
 ﻿using PI.Models.Infrastructure;
+using System.Collections.ObjectModel;
 
 namespace PI.Models.Models
 {
@@ -11,7 +12,7 @@ namespace PI.Models.Models
             this._file = file;
         }
 
-        public List<IAnimal> LoadData()
+        public ObservableCollection<IAnimal> LoadData()
         {
             if(!File.Exists($"{_file}.txt"))
             {
@@ -21,7 +22,7 @@ namespace PI.Models.Models
             return null;
         }
 
-        public void SaveData(List<IAnimal> animals)
+        public void SaveData(ObservableCollection<IAnimal> animals)
         {
             using (StreamWriter sw = new StreamWriter($"{_file}.txt"))
             {
