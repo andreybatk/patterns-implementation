@@ -7,8 +7,8 @@ namespace PI.Models.Models
     {
         public Repository(IDataAction Method)
         {
-            this.Mode = Method;
-            this.Animals = new ObservableCollection<IAnimal>();
+            Mode = Method;
+            Animals = new ObservableCollection<IAnimal>();
         }
 
         public IDataAction Mode { get; set; }

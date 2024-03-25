@@ -8,17 +8,15 @@ namespace MVP
 {
     internal class Model
     {
-        public ObservableCollection<IAnimal> Animals;
-        public Repository Repository;
-
         public Model()
         {
             Repository = new Repository(new KeeperJson("animals"));
             Animals = Repository.Animals;
-
-            //Animals.Add(AnimalFactory.GetAnimal(null, "Собака", 10));
-            //Animals.Add(AnimalFactory.GetAnimal("Bird", "Ястреб", 2));
         }
+
+        public ObservableCollection<IAnimal> Animals;
+        public Repository Repository;
+
         public void Save()
         {
             try

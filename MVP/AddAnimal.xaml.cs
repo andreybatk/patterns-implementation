@@ -2,9 +2,6 @@
 
 namespace MVP
 {
-    /// <summary>
-    /// Interaction logic for AddAnimal.xaml
-    /// </summary>
     public partial class AddAnimal : Window
     {
 

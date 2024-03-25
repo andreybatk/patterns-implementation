@@ -6,9 +6,9 @@ namespace PI.Models.Models
     {
         public Animal(string kindOfAnimal, int age)
         {
-            this.Age = age;
-            this.KindOfAnimal = kindOfAnimal;
-            this.Type = "Not Determined";
+            Age = age;
+            KindOfAnimal = kindOfAnimal;
+            Type = "Not Determined";
         }
 
         public int Age { get; set; }

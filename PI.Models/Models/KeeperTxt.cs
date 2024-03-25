@@ -9,12 +9,12 @@ namespace PI.Models.Models
 
         public KeeperTxt(string file)
         {
-            this._file = file;
+            _file = file;
         }
 
         public ObservableCollection<IAnimal> LoadData()
         {
-            if(!File.Exists($"{_file}.txt"))
+            if (!File.Exists($"{_file}.txt"))
             {
                 throw new FileNotFoundException("Файл не найден.");
             }

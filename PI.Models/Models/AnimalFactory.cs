@@ -5,7 +5,7 @@ namespace PI.Models.Models
     public static class AnimalFactory
     {
         /// <summary>
-        /// Get Animal
+        /// Получить экземпляр животного
         /// </summary>
         /// <param name="animalType">Тип: Amphibian, Bird, Mammal (птицы, млекопитающие, земноводные) null</param>
         /// <param name="kindOfAnimal">Вид</param>
@@ -15,7 +15,8 @@ namespace PI.Models.Models
         {
             switch (animalType?.Trim().ToLower())
             {
-                case "птицы": animalType = "Bird";
+                case "птицы":
+                    animalType = "Bird";
                     break;
                 case "млекопитающие":
                     animalType = "Mammal";

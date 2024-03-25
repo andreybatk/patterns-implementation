@@ -11,7 +11,7 @@ namespace PI.Models.Models
 
         public KeeperJson(string file)
         {
-            this._file = file;
+            _file = file;
         }
 
         public ObservableCollection<IAnimal> LoadData()

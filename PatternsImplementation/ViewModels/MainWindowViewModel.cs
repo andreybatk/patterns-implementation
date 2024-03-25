@@ -19,12 +19,11 @@ namespace MVVM.ViewModels
             _repository = new Repository(new KeeperJson("animals"));
 
             Animals = _repository.Animals;
-            //Animals.Add(AnimalFactory.GetAnimal(null, "Собака", 10));
-            //Animals.Add(AnimalFactory.GetAnimal("Bird", "Ястреб", 2));
 
             SaveDataCommand = new RelayCommand(OnSaveDataCommandExecuted);
             LoadDataCommand = new RelayCommand(OnLoadDataCommandExecuted);
         }
+
         public ObservableCollection<IAnimal> Animals { get => _animals; set => Set(ref _animals, value); }
         public ICommand SaveDataCommand { get; }
         public ICommand LoadDataCommand { get; }

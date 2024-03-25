@@ -5,8 +5,8 @@ namespace MVP
 {
     internal class Presenter
     {
-        IView view;
-        Model model;
+        public IView view;
+        public Model model;
 
         public Presenter(IView View)
         {
@@ -25,7 +25,7 @@ namespace MVP
         }
         public void Delete(IAnimal? animal)
         {
-            if(animal != null)
+            if (animal != null)
             {
                 model.Delete(animal);
             }
